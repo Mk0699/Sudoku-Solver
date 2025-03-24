@@ -68,7 +68,7 @@ class sudoku implements ActionListener{
             panel1.add(panels[i]);
         }
 
-        //creating
+        //creating 81 textfield slots and adding them to respective panels of the panel1
         for(int i=0 ; i<9 ; i++){
             for(int j=0 ; j < 9 ; j++){
                 slots[k] = new JTextField();
@@ -79,6 +79,7 @@ class sudoku implements ActionListener{
             }
         }
 
+        //creating 2 buttons and adding them to panel2
         for(int i=0 ; i <2 ; i++){
             buttons[i] = new JButton();
             buttons[i].setFocusable(false);
@@ -87,17 +88,28 @@ class sudoku implements ActionListener{
             panel2.add(buttons[i]);
         }
 
+        //setting the button name as "solve"
         buttons[0].setText("solve");
+        //linking the button with Action Listener
         buttons[0].addActionListener(this);
+        //setting the font of text of button
         buttons[0].setFont(new Font("MV BOLI", Font.BOLD, 50));
 
+
+        //setting the button name as "solve"
         buttons[1].setText("reset");
+        //linking the button with Action Listener
         buttons[1].addActionListener(this);
+        //setting the font of text of button
         buttons[1].setFont(new Font("MV BOLI", Font.BOLD, 50));
-        
+
+        //adding panel1 to main frame
         frame.add(panel1);
+        //adding panel2 to main frame
         frame.add(panel2);
+        //setting the size of the main frame
         frame.setSize(700, 900);
+        //setting the visibility of main frame to true
         frame.setVisible(true);
     }
 
